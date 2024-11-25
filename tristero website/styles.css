@@ -55,3 +55,86 @@ body, html {
         opacity: 1;
     }
 }
+
+form {
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    animation: counter-pulse 10s infinite; /* Same counter-animation as "Coming Soon" */
+}
+
+form label {
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    font-size: 2vw;
+}
+
+form input {
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 25px;
+    background: transparent;
+    color: white;
+    font-family: Arial, sans-serif;
+    width: 300px;
+}
+
+form input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+form button {
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 25px;
+    background: transparent;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+}
+
+@media screen and (max-width: 768px) {
+    body, html {
+        background-color: #FF4F00;
+    }
+
+    .background-text {
+        display: none; /* Hide the background text on mobile */
+    }
+
+    .circle {
+        display: none; /* Hide the animated circle on mobile */
+    }
+
+    form {
+        position: fixed;
+        top: 50%; /* Center vertically */
+        animation: none; /* Remove animation */
+    }
+
+    form label {
+        font-size: 6vw; /* Larger font size for mobile */
+    }
+
+    form input {
+        width: 80vw; /* Wider input for mobile */
+        max-width: 300px;
+    }
+
+    form button {
+        font-size: 5vw; /* Larger button text for mobile */
+    }
+
+    .circle::before {
+        content: 'Coming Soon';
+        position: fixed; /* Change to fixed */
+        top: 30%; /* Move up slightly */
+        font-size: 10vw; /* Larger font size for mobile */
+        animation: none; /* Remove animation */
+    }
+}
