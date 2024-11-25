@@ -133,8 +133,9 @@ form button {
     .circle {
         width: 400vw; /* Make circle much larger */
         height: 400vw;
-        bottom: -200vw; /* Adjust position to show top portion */
-        left: -150vw; /* Center the circle */
+        bottom: -100vw; /* Adjust position to show top portion */
+        left: -50vw; /* Center the circle */
         animation: none; /* Remove animation for better performance */
     }
+}
 }
